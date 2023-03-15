@@ -19,11 +19,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <div className={styles.navbar}>
         <Navbar />
+        </div>
+        <div className={styles.sidemenu}>
         <Sidemenu />
+        </div>
+       
+        <div className={styles.currency}>
         <Currency />
-
+        </div>
+        
+        <div className={styles.footer}>
         <Footer />
+        </div>
+
+       
+        
       </main>
     </>
   );

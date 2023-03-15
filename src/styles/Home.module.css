@@ -1,0 +1,27 @@
+.main{
+    display: grid;
+  grid-template-areas:
+    'navbar navbar navbar navbar navbar navbar'
+    'sidemenu currency currency currency currency currency'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  width: 100%;
+}
+.navbar{
+    grid-area: navbar;
+  }
+  
+  .sidemenu{
+    grid-area : sidemenu;
+    height: 600px;
+  }
+  
+  .currency{
+    grid-area : currency
+  }
+  
+  .footer{
+    grid-area : footer
+  }

@@ -1,3 +1,39 @@
-body{
-  background-color: #FAFCFF;
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Manrope:wght@500&family=Mukta&display=swap");
+
+body {
+  background-color: #fafcff;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 5%;
+  font-family: "EB Garamond", serif;
+  font-family: "Manrope", sans-serif;
+  font-family: "Mukta", sans-serif;
+  display: grid;
+  grid-template-areas:
+    'navbar navbar navbar navbar navbar navbar'
+    'sidemenu currency currency currency currency currency'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  
+  padding: 10px;
+}
+
+.navbar{
+  grid-area: navbar;
+}
+
+.sidemenu{
+  grid-area : sidemenu
+}
+
+.currency{
+  grid-area : currency
+}
+
+.footer{
+  grid-area : footer
+}
+
+#__next{
+  width: 357%;
 }
