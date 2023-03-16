@@ -1,8 +1,8 @@
-import React from 'react'
-
+import React,{useeffect} from 'react'
+import styles from '../../styles/currency.module.css'
 const Currency = () => {
   return (
-    <div>Currency</div>
+    <div className={styles.currency}>Currency</div>
   )
 }
 

@@ -19,7 +19,10 @@
   }
   
   .currency{
-    grid-area : currency
+    grid-area : currency;
+    background-color: aliceblue;
+    outline: 1px solid grey !important;
+    border-radius: 6px;
   }
   
   .footer{
