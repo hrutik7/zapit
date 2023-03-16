@@ -21,7 +21,9 @@
   .currency{
     grid-area : currency;
     background-color: aliceblue;
-    outline: 1px solid grey !important;
+    /* outline: 1px solid grey !important; */
+    box-shadow: 3px 3px 3px 3px #80ed99;
+    
     border-radius: 6px;
   }
   

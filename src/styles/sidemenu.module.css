@@ -52,28 +52,24 @@
 }
 
 .sidemenu nav > ul li {
-  /* width: 100px;
-  position: relative;
-  background-color: #c7f9cc;
-  text-align: center; */
-  width: 176px;
-  padding-left: 10px;
-  position: relative;
-  background-color: white;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-content: flex-start;
-  /* height: 21px; */
-  margin-left: -35px;
-  border-radius: 6px;
-  border-radius: 6px;
-  color: grey;
-  line-height: 29px;
-  outline: 1px solid grey !important;
+  width: 174px;
+    padding-left: 10px;
+    position: relative;
+    background-color: white;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    /* height: 21px; */
+    margin-left: -40px;
+    border-radius: 6px;
+    border-radius: 6px;
+    color: grey;
+    line-height: 29px;
+    outline: 1px solid grey !important;
 }
 .sidemenu nav > ul li:hover {
-  width: 176px;
+  width: 174px;
   position: relative;
   background-color: #80ed99;
   cursor: pointer;
