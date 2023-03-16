@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Manrope:wght@500&family=Mukta&display=swap");
+.sidemenu {
+  display: flex;
+}
+
+.sidemenu li {
+  margin-top: 15%;
+  flex-direction: column;
+}
+.sidemenu input {
+  font-size: 18px;
+  padding: 10px;
+  background: white;
+  border: none;
+  border-radius: 3px;
+  outline: 1px solid grey !important;
+  border-radius: 50px;
+  height: 8px;
+  margin-top: 20%;
+}
+.sidemenu ::placeholder {
+  color: grey ;
+  letter-spacing: 1.2px;
+}
+
+.sidemenu input:focus {
+  font-size: 18px;
+  padding: 10px;
+  background: #c7f9cc;
+  border: none;
+  border-radius: 3px;
+  outline: 1px solid #57CC99 !important;
+  border-radius: 50px;
+  height: 8px;
+  margin-top: 20%;
+}
+.input-focus::-webkit-input-placeholder  {
+  color: #c7f9cc ;
+  letter-spacing: 1.2px;
+}
+
+/* input{
+
+} */

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Manrope:wght@500&family=Mukta&display=swap");
 
 body {
-  background-color: #fafcff;
+  background-color: #EDF9F5;
   margin-left: 100px;
   margin-right: 100px;
-  margin-top: 5%;
+  margin-top: 0%;
   font-family: "EB Garamond", serif;
   font-family: "Manrope", sans-serif;
   font-family: "Mukta", sans-serif;
@@ -35,5 +35,5 @@ body {
 }
 
 #__next{
-  width: 357%;
+  width: 277%;
 }

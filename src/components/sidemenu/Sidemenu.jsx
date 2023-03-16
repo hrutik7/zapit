@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import styles from "../../styles/sidemenu.module.css";
 const Sidemenu = () => {
   return (
-    <div>Sidemenu</div>
-  )
-}
+    <div className={styles.sidemenu}>
+      <input type="text" placeholder="search..." />
+    </div>
+  );
+};
 
-export default Sidemenu
+export default Sidemenu;
