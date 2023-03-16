@@ -46,6 +46,7 @@
 } */
 
 .sidemenu ul {
+  letter-spacing: 1.2px;
   list-style-type: none;
   line-height: 60px;
   display: flex;
