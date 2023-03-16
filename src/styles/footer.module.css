@@ -1,0 +1,46 @@
+.logo{
+    /* background-color: red; */
+    font-size: 37px;
+    font-weight: bold;
+    color: #57CC99;
+    letter-spacing: 2.2px;
+}
+
+
+.socialcontainer {
+    background: #F0F8FF;
+    padding: 25px 50px;
+    display: flex;
+    margin-top: 250px;
+    justify-content: space-around;
+  }
+  
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+  
+  a.social:hover {
+    transform: translateY(-2px);
+  }
+  
+  
+  
+  a.facebook {
+    color: #57cc99;
+    width: 30px;
+    height: 30px;
+  }
+  
+  a.twitter {
+    color: #57cc99;
+    width: 30px;
+    height: 30px;
+  }
+  
+  a.instagram {
+    color: #57cc99;
+    width: 30px;
+    height: 30px;
+  }
