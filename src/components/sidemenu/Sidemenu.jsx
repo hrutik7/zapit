@@ -15,6 +15,18 @@ const Sidemenu = () => {
         </li>
       </ul>
     </nav>
+
+    <nav>
+      <ul>
+      
+        <li><a>sort by ...</a>
+          <ul>
+            <li><a>Price change</a></li>
+            <li><a>Market cap</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     </div>
   );
 };
