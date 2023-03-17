@@ -4,6 +4,13 @@ import styles from "../../styles/sidemenu.module.css";
 import { useDispatch } from "react-redux";
 const Sidemenu = () => {
   const dispatch = useDispatch();
+  const fetchcoin = async (endpoint) =>{
+    console.log(endpoint,"endpoint")
+    const fetchdata = await fetch(`https://api.coingecko.com/api/v3/${endpoint}/`)
+    const fetchres = await fetchdata.json()
+
+    console.log(fetchres,"fetchres")
+  }
   return (
     <div className={styles.sidemenu}>
       <input
@@ -31,10 +38,10 @@ const Sidemenu = () => {
             <a>Type of currency</a>
             <ul>
               <li>
-                <a>Tokens</a>
+                <a onClick={()=>{fetchcoin("coins")}}>Tokens</a>
               </li>
               <li>
-                <a>Coins</a>
+                <a onClick={()=>{fetchcoin("coins")}}>Coins</a>
               </li>
             </ul>
           </li>
