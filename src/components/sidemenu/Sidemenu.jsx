@@ -2,15 +2,19 @@ import React from "react";
 import styles from "../../styles/sidemenu.module.css";
 
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 const Sidemenu = () => {
   const dispatch = useDispatch();
-  const fetchcoin = async (endpoint) =>{
-    console.log(endpoint,"endpoint")
-    const fetchdata = await fetch(`https://api.coingecko.com/api/v3/${endpoint}/`)
-    const fetchres = await fetchdata.json()
+  const searchedcoin = useSelector((custom) => custom.custom.coins);
+  const fetchcoin = async (endpoint) => {
+    console.log(endpoint, "endpoint");
+    const fetchdata = await fetch(
+      `https://api.coingecko.com/api/v3/${endpoint}/`
+    );
+    const fetchres = await fetchdata.json();
 
-    console.log(fetchres,"fetchres")
-  }
+    console.log(fetchres, "fetchres");
+  };
   return (
     <div className={styles.sidemenu}>
       <input
@@ -18,9 +22,11 @@ const Sidemenu = () => {
         placeholder="search..."
         onChange={async (e) => {
           console.log(e.target.value, "e.target.value", typeof e.target.value);
-          const fetchcoin = await fetch(`https://api.coingecko.com/api/v3/search?query=${e.target.value}`)
-          const fetchjson = await fetchcoin.json()
-          console.log(fetchjson)
+          const fetchcoin = await fetch(
+            `https://api.coingecko.com/api/v3/search?query=${e.target.value}`
+          );
+          const fetchjson = await fetchcoin.json();
+          console.log(fetchjson);
           dispatch({
             type: "findcoins",
             payload: e.target.value,
@@ -38,10 +44,22 @@ const Sidemenu = () => {
             <a>Type of currency</a>
             <ul>
               <li>
-                <a onClick={()=>{fetchcoin("coins")}}>Tokens</a>
+                <a
+                  onClick={() => {
+                    fetchcoin("coins");
+                  }}
+                >
+                  Tokens
+                </a>
               </li>
               <li>
-                <a onClick={()=>{fetchcoin("coins")}}>Coins</a>
+                <a
+                  onClick={() => {
+                    fetchcoin("coins");
+                  }}
+                >
+                  Coins
+                </a>
               </li>
             </ul>
           </li>
@@ -54,10 +72,48 @@ const Sidemenu = () => {
             <a>sort by ...</a>
             <ul>
               <li>
-                <a>Price change</a>
+                <a
+                  onClick={() => {
+                    console.log(
+                      searchedcoin,
+                      typeof searchedcoin,
+                      "searchedcoin.coins"
+                    );
+                    Object.keys(searchedcoin).sort(
+                      (a, b) =>
+                        b.market_cap_change_percentage_24h -
+                        a.market_cap_change_percentage_24h
+                    );
+                    dispatch({
+                      type: "getcoins",
+                      payload: searchedcoin,
+                    });
+                    console.log(searchedcoin, "searchedcoindd");
+                  }}
+                >
+                  Price change
+                </a>
               </li>
               <li>
-                <a>Market cap</a>
+                <a
+                  onClick={() => {
+                    console.log(
+                      searchedcoin,
+                      typeof searchedcoin,
+                      "searchedcoin.coins"
+                    );
+                    Object.keys(searchedcoin).sort(
+                      (a, b) => b.market_cap - a.market_cap
+                    );
+                    dispatch({
+                      type: "getcoins",
+                      payload: searchedcoin,
+                    });
+                    console.log(searchedcoin, "searchedcoindd");
+                  }}
+                >
+                  Market cap
+                </a>
               </li>
             </ul>
           </li>
