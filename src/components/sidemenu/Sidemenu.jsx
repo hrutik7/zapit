@@ -7,13 +7,13 @@ const Sidemenu = () => {
   const dispatch = useDispatch();
   const searchedcoin = useSelector((custom) => custom.custom.coins);
   const fetchcoin = async (endpoint) => {
-    console.log(endpoint, "endpoint");
+    // console.log(endpoint, "endpoint");
     const fetchdata = await fetch(
       `https://api.coingecko.com/api/v3/${endpoint}/`
     );
     const fetchres = await fetchdata.json();
 
-    console.log(fetchres, "fetchres");
+    // console.log(fetchres, "fetchres");
   };
   return (
     <div className={styles.sidemenu}>
@@ -21,12 +21,12 @@ const Sidemenu = () => {
         type="text"
         placeholder="search..."
         onChange={async (e) => {
-          console.log(e.target.value, "e.target.value", typeof e.target.value);
+          // console.log(e.target.value, "e.target.value", typeof e.target.value);
           const fetchcoin = await fetch(
             `https://api.coingecko.com/api/v3/search?query=${e.target.value}`
           );
           const fetchjson = await fetchcoin.json();
-          console.log(fetchjson);
+          // console.log(fetchjson);
           dispatch({
             type: "findcoins",
             payload: e.target.value,
@@ -74,11 +74,11 @@ const Sidemenu = () => {
               <li>
                 <a
                   onClick={() => {
-                    console.log(
-                      searchedcoin,
-                      typeof searchedcoin,
-                      "searchedcoin.coins"
-                    );
+                    // console.log(
+                    //   searchedcoin,
+                    //   typeof searchedcoin,
+                    //   "searchedcoin.coins"
+                    // );
                     Object.keys(searchedcoin).sort(
                       (a, b) =>
                         b.market_cap_change_percentage_24h -
@@ -88,7 +88,7 @@ const Sidemenu = () => {
                       type: "getcoins",
                       payload: searchedcoin,
                     });
-                    console.log(searchedcoin, "searchedcoindd");
+                    // console.log(searchedcoin, "searchedcoindd");
                   }}
                 >
                   Price change
@@ -97,11 +97,11 @@ const Sidemenu = () => {
               <li>
                 <a
                   onClick={() => {
-                    console.log(
-                      searchedcoin,
-                      typeof searchedcoin,
-                      "searchedcoin.coins"
-                    );
+                    // console.log(
+                    //   searchedcoin,
+                    //   typeof searchedcoin,
+                    //   "searchedcoin.coins"
+                    // );
                     Object.keys(searchedcoin).sort(
                       (a, b) => b.market_cap - a.market_cap
                     );
@@ -109,7 +109,7 @@ const Sidemenu = () => {
                       type: "getcoins",
                       payload: searchedcoin,
                     });
-                    console.log(searchedcoin, "searchedcoindd");
+                    // console.log(searchedcoin, "searchedcoindd");
                   }}
                 >
                   Market cap

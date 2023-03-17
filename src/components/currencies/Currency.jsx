@@ -9,7 +9,7 @@ const Currency = () => {
     cryptoCall()
   },[]);
   const dispatch = useDispatch()
-  console.log(searchedcoin,typeof(searchedcoin),"searchedcoin")
+  // console.log(searchedcoin,typeof(searchedcoin),"searchedcoin")
   const cryptoCall = async ()=>{
   const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1&sparkline=false',{
     headers: {
@@ -26,7 +26,7 @@ const Currency = () => {
     payload:result
   })
   setData(searchedcoin)
-  console.log(searchedcoin,typeof(searchedcoin),"result")
+  // console.log(searchedcoin,typeof(searchedcoin),"result")
   }
   return (
     <div className={styles.currency}>
@@ -41,7 +41,7 @@ const Currency = () => {
           Marcket Cap
         </div>
       </div>
-      { console.log(searchedcoin,"searchedcoinsearchedcoin")}
+      {/* { console.log(searchedcoin,"searchedcoinsearchedcoin")} */}
       {
         
        searchedcoin.map((searchedcoin,key=>{
