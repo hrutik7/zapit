@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../../styles/sidemenu.module.css";
+
+import { useDispatch } from "react-redux";
 const Sidemenu = () => {
   return (
     <div className={styles.sidemenu}>
