@@ -3,9 +3,15 @@ import styles from "../../styles/sidemenu.module.css";
 
 import { useDispatch } from "react-redux";
 const Sidemenu = () => {
+  const dispatch = useDispatch()
   return (
     <div className={styles.sidemenu}>
-      <input type="text" placeholder="search..." />
+      <input type="text" placeholder="search..." onChange={e=>{
+        dispatch({
+          type:"findcoins",
+          payLoad:e.target.value
+        })
+      }} />
       <nav>
       <ul>
       

@@ -2,12 +2,13 @@ import { createReducer } from "@reduxjs/toolkit";
 
 const initailState = {
     
-    coins : []
+    coins : [],
+    searchcoin :""
 }
 
 export const customReducer = createReducer(initailState,{
         findcoins : (state,action) =>{
-            state.c +=1
+            state.searchcoin +=action.Payload
         }
 })
 
