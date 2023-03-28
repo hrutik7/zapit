@@ -9,7 +9,14 @@ const Sidemenu = () => {
   const fetchcoin = async (endpoint) => {
     // console.log(endpoint, "endpoint");
     const fetchdata = await fetch(
-      `https://api.coingecko.com/api/v3/${endpoint}/`
+      `https://api.coingecko.com/api/v3/${endpoint}/`,{
+        headers: {
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods':'*'
+          }
+          ,
+          mode:'cors'
+      }
     );
     const fetchres = await fetchdata.json();
 
@@ -23,7 +30,14 @@ const Sidemenu = () => {
         onChange={async (e) => {
           // console.log(e.target.value, "e.target.value", typeof e.target.value);
           const fetchcoin = await fetch(
-            `https://api.coingecko.com/api/v3/search?query=${e.target.value}`
+            `https://api.coingecko.com/api/v3/search?query=${e.target.value}`,{
+              headers: {
+                'Access-Control-Allow-Origin' : '*',
+                'Access-Control-Allow-Methods':'*'
+                }
+                ,
+                mode:'cors'
+            }
           );
           const fetchjson = await fetchcoin.json();
           // console.log(fetchjson);
